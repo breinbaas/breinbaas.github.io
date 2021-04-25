@@ -244,7 +244,7 @@ So there we are. We just stepped through the documentation example for DGeoStabi
 
 ![the output](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/01.02.jpg?raw=true)
 
-See you in the next tutorial!
+See you in the [next tutorial](https://breinbaas.github.io/python/geolib/2021/04/25/geolib-geometry.html)!
 
 the code for this part can be found [here](https://github.com/breinbaas/breinbaas.github.io/blob/master/code/01.basics.py?raw=true)
 
