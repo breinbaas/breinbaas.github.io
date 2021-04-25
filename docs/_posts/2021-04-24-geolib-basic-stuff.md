@@ -41,7 +41,7 @@ from geolib.models.dstability.analysis import DStabilityBishopAnalysisMethod, DS
 from pathlib import Path
 ```
 
-If you have installed geolib you will need to know which modules you have to import. Geolib uses a intuitive way to guide you to the modules. Modules that have objects that are shared over all models can be found in the geolib.soils and geolib.geometry modules. Model specific objects can be found in the geolib.models modules. For example, a uniform load is different for DSettlement and DStability because of the implementation in the calculation software. If you want to use the UniformLoad for DSettlement you will have to write;
+If you have installed geolib you will need to know which modules you have to import. Geolib uses an intuitive way to guide you to the modules. Modules that have objects that are shared over all models can be found in the geolib.soils and geolib.geometry modules. Model specific objects can be found in the geolib.models modules. For example, a uniform load is different for DSettlement and DStability because of the implementation in the calculation software. If you want to use the UniformLoad for DSettlement you will have to write;
 
 ```python
 from geolib.models.dsettlement.loads import UniformLoad
