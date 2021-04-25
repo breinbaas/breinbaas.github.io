@@ -107,7 +107,7 @@ For geometries where the layers are either between coordinates xleft, xmid and x
 
 ![this is easy to fix](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/02.05.png?raw=true)
 
-Let's say you hava layers like this;
+Let's say you have layers like this;
 
 
 ```python
