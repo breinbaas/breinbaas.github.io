@@ -7,16 +7,16 @@ categories: python geolib
 
 ### Geolib series
 
-After waiting for about half a year after working on the geolib code with some great developers I finally got time to work **with** the library. So I decided to start a series of tutorials on how to use this amazing library. For those who don't know about geolib, it is actually an API over the Deltares geotechnical software called [the DSeries](https://www.deltares.nl/en/). To be complete, it is an interface over the following parts of the DSeries;
+After waiting for about half a year after working **on** the geolib code with some great developers I finally got time to work **with** the library. So I decided to start a series of tutorials on how to use this amazing library. For those who don't know about geolib, it is actually an API over the Deltares geotechnical software called [the DSeries](https://www.deltares.nl/en/). To be complete, it is an interface over the following parts of the DSeries;
 
 * [DFoundations](https://www.deltares.nl/en/software/d-foundation-2/) software for foundation design
 * [DSheetPiling](https://www.deltares.nl/en/software/d-sheet-piling-2/) software for sheetpile calculations
 * [DSettlement](https://www.deltares.nl/en/software/d-settlement-2/) software for settlement calculations
-* [DStability](https://www.deltares.nl/nl/software/d-stability-nl/)
+* [DStability](https://www.deltares.nl/nl/software/d-stability-nl/) software for stability analysis
 
-DStability is a bit of the odd one out since it is based on a new design approach. The input is based on a large collection of json files whereas the other software is based on an text file based input / output system. DStability is also the only one free to use. Finally, DStability is what I use most for work so the tutorial series might be focused on DStability for now.. also because I do not have commercial licenses for the other ones.
+DStability is a bit of the odd one out since it is based on a new design approach. The input is based on a large collection of json files whereas the other software is based on text files. DStability is also the only one that is free to use. Finally, DStability is what I use most for work so the tutorial series might be focused on DStability for now.. also because I do not have commercial licenses for the other ones.
 
-With geolib you will be able to use Python to generate input and read output of all the mentioned software so theoretically you will not need to push any button on a GUI anymore. This opens up a lot of possibilities for automation of calculations which is exactly my cup of tea. 
+With geolib you will be able to use Python to generate input for and read output of all the mentioned software so theoretically you will not need to push any button on a GUI anymore. This opens up a lot of possibilities for automation of calculations which is exactly my cup of tea. 
 
 So let's start!
 
@@ -24,7 +24,7 @@ So let's start!
 
 breinbaasnl@gmail.com
 
-**note** This series of tutorials is not connected to any of the other developers or Deltares in any way. It is my interpretation of geolib and how to work with it.
+**note** These tutorials are not connected to any of the other developers or Deltares in any way. It is my interpretation of geolib and how to work with it.
 
 ### The basics
 
@@ -41,7 +41,7 @@ from geolib.models.dstability.analysis import DStabilityBishopAnalysisMethod, DS
 from pathlib import Path
 ```
 
-If you have installed geolib (and hopefully using a virtual environment) you will need to know which modules you have to import. Geolib uses a intuitive way to guide you to the modules. Modules that have objects that are shared over all models can be found in the geolib.soils and geolib.geometry modules. Model specific objects can be found in the geolib.models modules. For example, a uniform load is different for DSettlement and DStability because of the implementation in the calculation software. If you want to use the UniformLoad for DSettlement you will have to write;
+If you have installed geolib you will need to know which modules you have to import. Geolib uses a intuitive way to guide you to the modules. Modules that have objects that are shared over all models can be found in the geolib.soils and geolib.geometry modules. Model specific objects can be found in the geolib.models modules. For example, a uniform load is different for DSettlement and DStability because of the implementation in the calculation software. If you want to use the UniformLoad for DSettlement you will have to write;
 
 ```python
 from geolib.models.dsettlement.loads import UniformLoad
