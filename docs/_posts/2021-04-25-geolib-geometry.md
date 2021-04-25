@@ -97,7 +97,7 @@ layer_3 = [
 
 There we go.. much better!
 
-![nope, no problem](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/02.03.jpg?raw=true)
+![nope, no problem](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/02.04.jpg?raw=true)
 
 Now I do think that fixing broken geometries should actually be part of the geolib logic but it is complicated to fix whatever users might come up with. For now be aware of this problem because it will cause you headaches due to the fact that the geometry is fine in the software until you start your analysis and you see funny slope circles! 
 
