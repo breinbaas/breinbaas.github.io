@@ -105,10 +105,9 @@ Now I do think that fixing broken geometries should actually be part of the geol
 
 For geometries where the layers are either between coordinates xleft, xmid and xright (like in the next image) there is a rather easy solution.
 
-![this is easy to fix](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/02.05.jpg?raw=true)
+![this is easy to fix](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/02.05.png?raw=true)
 
 Let's say you hava layers like this;
-
 
 
 ```python
