@@ -154,7 +154,7 @@ Note that geolib uses x for the position and z for the depth. In the previous ve
 
 The logic of building layers makes sense. It is simply a collection of Point classes. 
 
-Also note that DGeo Suite Stability comes with predefined soil types. You can find them if you open up the software and look add the apply material option;
+Also note that DGeo Suite Stability comes with predefined soil types. You can find them if you open up the software and look at the apply material option;
 
 ![predefined soils](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/01.01.jpg?raw=true)
 
