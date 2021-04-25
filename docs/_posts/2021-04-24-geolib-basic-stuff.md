@@ -5,10 +5,6 @@ date:   2021-04-24 18:48:49 +0200
 categories: python geolib
 ---
 
-### Whoami
-
-Rob van Putten, breinbaasnl@gmail.com, geotechnical engineer / developer / creative thinker 
-
 ### Geolib series
 
 After waiting for about half a year after working on the geolib code with some great developers I finally got time to work **with** the library. So I decided to start a series of tutorials on how to use this amazing library. For those who don't know about geolib, it is actually an API over the Deltares geotechnical software called [the DSeries](https://www.deltares.nl/en/). To be complete, it is an interface over the following parts of the DSeries;
