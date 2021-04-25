@@ -5,7 +5,7 @@ date:   2021-04-25 13:53:00 +0200
 categories: python geolib
 ---
 
-### tutorial in development!
+### tutorial in beta.. almost ready, use at own risk
 
 ### Geolib series
 
