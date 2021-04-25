@@ -160,7 +160,7 @@ The logic of building layers makes sense. It is simply a collection of Point cla
 
 Also note that DGeo Suite Stability comes with predefined soil types. You can find them if you open up the software and look add the apply material option;
 
-![predefined soils]()
+![predefined soils](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/01.01.jpg?raw=true)
 
 That's the reason why you find those names in the layers_and_soils list.
 
@@ -246,9 +246,9 @@ filename = Path(PATH) / FILE
 
 So there we are. We just stepped through the documentation example for DGeoStability and created a valid input file which we can open in the software or calculate using the console option. I hope this inspires you to think about all the stuff that you can do right now. 
 
-![the output]()
+![the output](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/01.02.jpg?raw=true)
 
 See you in the next tutorial!
 
-the code for this part can be found [here]()
+the code for this part can be found [here](https://github.com/breinbaas/breinbaas.github.io/blob/master/code/01.basics.py?raw=true)
 
