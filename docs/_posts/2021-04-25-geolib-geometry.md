@@ -181,5 +181,5 @@ This will however not work for more complicated geometries. If you happen to get
 
 Be careful with geometries because they might look ok in the software but they might break during analysis. I've shown you one way to come up with a valid geometry but feel free to develop and share your own! Have fun and see you in the next tutorial!
 
-the code for this part can be found [here]()
+the code for this part can be found [here](https://github.com/breinbaas/breinbaas.github.io/blob/master/code/02.geometry.py?raw=true)
 
