@@ -174,7 +174,7 @@ will make sure that our z values increase in depth
 
 So a lot is happening in that line (and don't forget to import chain from itertools!) but in essence it selects all the possible z values and combines them in one list ordered from top to bottom. 
 
-Next you can use list to select points within the top and bottom coordinate of that layer, like so;
+Next you can use that list to select points within the top and bottom coordinate of that layer, like so;
 
 ```python
 z_extras = [z for z in z_combined if z < layer[0] and z > layer[1]]
