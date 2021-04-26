@@ -86,7 +86,6 @@ The solution is simple, **add all intersecting points to the layer** which in th
 
 ![geometry problem](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/02.06.png?raw=true)
 
-
 ```python
 layer_3 = [
     Point(x=30, z=-7),
@@ -94,6 +93,20 @@ layer_3 = [
     Point(x=30, z=-3),     
     Point(x=50, z=-3),    
     Point(x=50, z=-7),
+]
+```
+
+The same applies to the intersection with layer_1
+
+![geometry problem](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/02.07.png?raw=true)
+
+```python
+layer_1 = [
+    Point(x=0, z=-5),
+    Point(x=0, z=0),    
+    Point(x=30, z=0),
+    Point(x=30, z=-3), # another intersection
+    Point(x=30, z=-5),
 ]
 ```
 
