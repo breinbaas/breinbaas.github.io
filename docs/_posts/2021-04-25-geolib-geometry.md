@@ -17,6 +17,8 @@ breinbaasnl@gmail.com
 
 ### Geometry problem
 
+**update 2021-04-26** It seems that the geometry problem will be handled in later versions of geolib so be sure to follow the geolib news!
+
 Building up geometries from code is easy. Here's a short snippet of building up some layers as seen in the documentation;
 
 ```python
