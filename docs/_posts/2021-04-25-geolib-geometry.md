@@ -148,7 +148,7 @@ Let's break down that line for those unfamiliar with what is happening.
 z_combined = layers_left + layers_right]
 ```
 
-is a way to combine two lists so we append all elements from layers_left and layers_right
+is a way to combine two lists so we add all elements from layers_left and layers_right
 
 ```python
 [[l[0], l[1]] for l in layers_left + layers_right]
