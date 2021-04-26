@@ -3,14 +3,13 @@ from itertools import chain
 layers_left = [
     (0, -1, 'layer_1'),
     (-1, -3, 'layer_2'),
-    (-3, -5, 'layer_3'),
-    (-5, -7, 'layer_4')
+    (-3, -8, 'layer_3')    
 ]
 
 layers_right = [
     (-1, -2, 'layer_5'),
-    (-2, -5, 'layer_6'),
-    (-5, -6, 'layer_7')
+    (-2, -4, 'layer_6'),
+    (-4, -7, 'layer_7')
 ]
 
 def combine_layers(layers_left, layers_right, xleft, xmid, xright):
@@ -47,3 +46,6 @@ def combine_layers(layers_left, layers_right, xleft, xmid, xright):
 
 combined_layers = combine_layers(layers_left, layers_right, 0, 30, 50)
 print(combined_layers)
+
+    
+
