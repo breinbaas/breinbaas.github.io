@@ -5,8 +5,6 @@ date:   2021-04-25 13:53:00 +0200
 categories: python geolib
 ---
 
-### tutorial in beta.. almost ready, use at own risk
-
 ### Geolib series
 
 In my [previous tutorial](https://breinbaas.github.io/python/geolib/2021/04/24/geolib-basic-stuff.html) I told you about errors that you might introduce in the geometry. This tutorial will elaborate on this.
