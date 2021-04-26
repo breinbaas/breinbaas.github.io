@@ -70,8 +70,7 @@ layer_3 = [
     Point(x=50, z=-7),
 ]
 ```
-
-But unfortunately this will not work and you will not be warned because this is what it will look like if you open the generated file in DGeoStability;
+You simply add the bottomleft, topleft, topright and bottomright points. But unfortunately this will not work and you will not be warned because this is what it will look like if you open the generated file in DGeoStability;
 
 ![no problem](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/02.02.jpg?raw=true)
 
@@ -83,13 +82,16 @@ But it is not. Eventhough the geometry is off course nothing you expect to see i
 
 The critical slip circle simply stops at the boundary between layer_2 and layer_3. 
 
-The solution is simple, **add all points that are part of the outer polyline of the layer** which in this case means that you will have to add point x=30, z=-5 to layer 3!
+The solution is simple, **add all intersecting points to the layer** which in this case means that you will have to add point x=30, z=-5 to layer 3 because it is intersecting with the layer!
+
+![geometry problem](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/02.06.png?raw=true)
+
 
 ```python
 layer_3 = [
     Point(x=30, z=-7),
-    Point(x=30, z=-5),
-    Point(x=30, z=-3),    
+    Point(x=30, z=-5), # you need to add this point!
+    Point(x=30, z=-3),     
     Point(x=50, z=-3),    
     Point(x=50, z=-7),
 ]
@@ -127,7 +129,39 @@ So a layer is a tuple of (z_top, z_bottom, layer- or soilname). Now simply combi
 z_combined = sorted(list(set(chain(*[[l[0], l[1]] for l in layers_left + layers_right]))), reverse=True)
 ```
 
-Ok, a lot is happening in that line (and don't forget to import chain from itertools!) but in essence it selects all the possible z values and combines them in one list ordered from top to bottom. 
+Let's break down that line for those unfamiliar with what is happening.
+
+```python
+z_combined = layers_left + layers_right]
+```
+
+is a way to combine two lists so we append all elements from layers_left and layers_right
+
+```python
+[[l[0], l[1]] for l in layers_left + layers_right]
+```
+
+will create a list with both z coordinates of the layer like [[z1, z2], [z3, z4]...]
+
+```python
+chain(*[[l[0], l[1]] ...
+```
+
+will create a chain of elements like [z1, z2, z3, z4 ...]
+
+```python
+list(set(...))
+```
+
+will make sure that we have a list with unique elements only and
+
+```python
+sorted(..., reverse=True)
+```
+
+will make sure that our z values increase in depth 
+
+So a lot is happening in that line (and don't forget to import chain from itertools!) but in essence it selects all the possible z values and combines them in one list ordered from top to bottom. 
 
 Next you can use list to select points within the top and bottom coordinate of that layer, like so;
 
@@ -142,6 +176,8 @@ Now you are ready to add these coordinates to your layer and this way you can be
 The complete code as a function is here;
 
 ```python
+from itertools import chain
+
 def combine_layers(layers_left, layers_right, xleft, xmid, xright):
     result = []
     z_combined = sorted(list(set(chain(*[[l[0], l[1]] for l in layers_left + layers_right]))), reverse=True)
