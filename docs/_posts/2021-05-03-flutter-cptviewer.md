@@ -35,7 +35,7 @@ I like my apps to be simple and effective so it should be easy but here goes;
 The implemented soiltype correlations are;
 
 * no correlation
-* three type rule
+* three type rule (a big thanks to [Mattijs Borst](https://www.linkedin.com/in/mattijsborst/) for sending his code)
 * CUR162 based on electrical cone
 
 ![implemented soil correlations](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/cptviewer.03.png?raw=true)
@@ -52,7 +52,7 @@ Check the current issues and add new issues to [the issue tracker](https://githu
 
 ### The app
 
-The app can be found at the following URL [(https://cptviewer-458db.web.app/#/](https://cptviewer-458db.web.app/#/)
+The app can be found at the following URL [https://cptviewer-458db.web.app/#/](https://cptviewer-458db.web.app/#/)
 
 ### Support my work
 
