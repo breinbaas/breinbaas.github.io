@@ -40,6 +40,16 @@ The implemented soiltype correlations are;
 
 ![implemented soil correlations](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/cptviewer.03.png?raw=true)
 
+### Bugs / ideas?
+
+If you get an error it will (hopefully ;-) be shown as a message on the bottom of the screen like;
+![manual](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/cptviewer.01.png?raw=true)
+
+You've got 5 seconds to make a screenshot ;-) and send it to me. Be sure to add the used GEF file for debugging or else I cannot
+debug the code. 
+
+Check the current issues and add new issues to [the issue tracker](https://github.com/breinbaas/cptviewer_issues/issues)
+
 ### Support my work
 
 If you use my apps why not support me by hiring me for a course 'Python for engineers' or development work or a simple donation and make sure that these apps will stay free and online. I still have to pay server costs and my development time isn't free either. You can contact me using breinbaasnl@gmail.com, Thanks, Rob!
