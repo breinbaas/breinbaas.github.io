@@ -32,7 +32,7 @@ The implemented soiltype correlations are;
 
 ### Support my work
 
-If you use my apps why not support me by hiring me for a course 'Python for engineers' or development work or a simple donation and make sure that these apps will stay free and online. I still have to pay server costs and my development time isn't free either. You can contact me using breinbaasnl@gmail.com 
+If you use my apps why not support me by hiring me for a course 'Python for engineers' or development work or a simple donation and make sure that these apps will stay free and online. I still have to pay server costs and my development time isn't free either. You can contact me using breinbaasnl@gmail.com, Thanks, Rob!
 
 
 
