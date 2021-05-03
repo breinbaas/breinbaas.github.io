@@ -43,7 +43,7 @@ The implemented soiltype correlations are;
 ### Bugs / ideas?
 
 If you get an error it will (hopefully ;-) be shown as a message on the bottom of the screen like;
-![manual](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/cptviewer.01.png?raw=true)
+![manual](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/cptviewer.04.png?raw=true)
 
 You've got 5 seconds to make a screenshot ;-) and send it to me. Be sure to add the used GEF file for debugging or else I cannot
 debug the code. 
