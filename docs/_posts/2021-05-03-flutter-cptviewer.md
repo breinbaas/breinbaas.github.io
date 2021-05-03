@@ -6,7 +6,7 @@ Welcome to my first Flutter application called CPTViewer. This application will 
 
 More information on GEFCPT files can be found [here](https://publicwiki.deltares.nl/display/STREAM/GEF-CPT)
 
-The application can be found [here](https://cptviewer-458db.web.app/#/)
+Scroll down to find the actual link to the app.
 
 ### Disclaimer
 
@@ -49,6 +49,10 @@ You've got 5 seconds to make a screenshot ;-) and send it to me. Be sure to add 
 debug the code. 
 
 Check the current issues and add new issues to [the issue tracker](https://github.com/breinbaas/cptviewer_issues/issues)
+
+### The app
+
+The app can be found at the following URL [(https://cptviewer-458db.web.app/#/](https://cptviewer-458db.web.app/#/)
 
 ### Support my work
 
