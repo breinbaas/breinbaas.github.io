@@ -25,3 +25,19 @@ for (var i=0; i<lines.length; i++) {
     print(lines[i]);
 }
 ```
+### 'list comprehension'
+
+A fast way to convert a list of types to other types (bit like list comprehension);
+
+```
+var fargs = [for(var j = 0; j < args.length; j++) double.parse(args[j])];
+```
+
+### iterate over dictionary
+
+```
+bool hasColumnVoid = false;
+columnVoids.forEach((key, value) {
+    hasColumnVoid |= fargs[key] == value;
+});
+```
