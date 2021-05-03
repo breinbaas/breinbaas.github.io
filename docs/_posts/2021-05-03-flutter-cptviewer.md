@@ -4,8 +4,6 @@ Welcome to my first Flutter application called CPTViewer. This application will 
 
 **Note** your uploaded files will not be saved on the server!
 
-![basic layout](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/cptviewer.01.png?raw=true)
-
 More information on GEFCPT files can be found [here](https://publicwiki.deltares.nl/display/STREAM/GEF-CPT)
 
 The application can be found [here](https://cptviewer-458db.web.app/#/)
