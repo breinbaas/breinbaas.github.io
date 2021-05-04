@@ -40,6 +40,8 @@ The implemented soiltype correlations are;
 
 ![implemented soil correlations](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/cptviewer.03.png?raw=true)
 
+* update 2021-05-04 added CPT info widget, access it by simply swiping for the left side to the right or by clicking the menu button on the topleft of the app
+
 ### Bugs / ideas?
 
 If you get an error it will (hopefully ;-) be shown as a message on the bottom of the screen like;
