@@ -17,7 +17,7 @@ If you want to use geolib in combination with FastAPI to offer downloadable file
 def serialize(self, location: Union[FilePath, DirectoryPath]) -> io.BytesIO:
 ```
 
-Most of the times you don't want to create physical files on the API end but you want to create them in memory. Fortunately the geolib developers have already written most of the code for this but you will have to adjust a little more. The way I did is was to add a new method to dstability_model.py;
+Most of the times you don't want to create physical files on the API end but you want to create them in memory. Fortunately the geolib developers have already written most of the code for this but you will have to adjust a little more. The way I did it (because in Python there are always a lot of other possibilities) was to add a new method to dstability_model.py;
 
 ```python
 def serialize_buffer(self) -> io.BytesIO:
@@ -25,7 +25,7 @@ def serialize_buffer(self) -> io.BytesIO:
     return serializer.write(io.BytesIO())
 ```
 
-This will give you a BytesIO object as a result which can then be returned as a file using the following FastAPI code;
+This will give you a BytesIO object as a result which can then be returned as a downloadable file using the following FastAPI code;
 
 ```python
 from fastapi.responses import Response
