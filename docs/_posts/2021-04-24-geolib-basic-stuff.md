@@ -96,20 +96,7 @@ soil.mohr_coulomb_parameters.friction_angle.mean = 15.0
 soil_peat_id = dm.add_soil(soil)
 ```
 
-Easy isn't it? Simply define a soiltype by using the Soil class. You can also do it like this (I like that better);
-
-```python
-soil_peat_id = dm.add_soil(
-    Soil(
-        name = "Soil test",
-        code = "HV",
-        soil_weight_parameters.saturated_weight.mean = 10.2,
-        soil_weight_parameters.unsaturated_weight.mean = 10.2,
-        mohr_coulomb_parameters.cohesion.mean = 0.5,
-        mohr_coulomb_parameters.friction_angle.mean = 15.0
-    )
-)
-```
+Easy isn't it? Simply define a soiltype by using the Soil class. 
 
 Nice.. and this should open your eyes and make you think about putting all your soiltypes in a database so you can easily import these soils from your database.. I did!
 
