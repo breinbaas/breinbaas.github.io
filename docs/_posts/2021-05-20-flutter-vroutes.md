@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Flutter - Code Snippets"
+title:  "Flutter - Accepting URL parameters"
 date:   2021-05-20 12:24:00 +0200
 categories: flutter codesnippets
 ---
