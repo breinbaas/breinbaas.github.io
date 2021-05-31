@@ -13,7 +13,7 @@ In this article I will show you some code to call an (Deta) API from Qt and hand
 
 Qt needs to be installed with the OpenSSL modules to be fully functional. If you don't have it installed run the maintenance tool (on windows usually at ```C:\Qt\MaintenanceTool.exe```) and choose the OpenSSL installation under ```Developer and Designer Tools | OpenSSL x.x.xj Toolkit``` and choose the right version for your pc (probably 64-bit). 
 
-(qt maintenance tool)[]
+(qt maintenance tool)[https://github.com/breinbaas/breinbaas.github.io/blob/master/img/maintenancetool.png]
 
 
 Once this has been installed you need to copy the files from ```C:\Qt\Tools\OpenSSL\Win_x64\bin``` to your release and debug paths of the application that needs to make the https requests.
