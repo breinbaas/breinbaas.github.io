@@ -18,12 +18,17 @@ Qt needs to be installed with the OpenSSL modules to be fully functional. If you
 
 Once this has been installed you need to copy the files from ```C:\Qt\Tools\OpenSSL\Win_x64\bin``` to your release and debug paths of the application that needs to make the https requests.
 
+
+
 ### Qt code for a Deta URL call and JSON response
 
 ```cpp
 
-// SENDING
-// somewhere in your class and a defined url in the DETA_URL constant
+// SENDING PART
+// somewhere in your class where you want to call the API
+// *note* that DETA_URL is a reference to a QString with the URL
+// so this will translate to something like
+// https://mydeta.url/leveecodes?owner=ownername
 
 // create URL string
 const QString url_string = QString("%1/leveecodes?owner=%2").arg(DETA_URL, owner)
@@ -33,11 +38,16 @@ QNetworkRequest req = QNetworkRequest(QUrl(url_string));
 
 // send request and requesthandler to call
 m_networkaccesmanager.get(req);
-connect(&m_networkaccesmanager, &QNetworkAccessManager::finished, this, &DetaConnection::onLeveeCodesResult);
+connect(
+    &m_networkaccesmanager, 
+    &QNetworkAccessManager::finished, 
+    this, 
+    &DetaConnection::onLeveeCodesResult
+);
 
 ...
 
-// RECEIVING
+// RECEIVING PART
 // somewhere in your class in a slot that gets called from the sending part
 
 // read data
@@ -64,4 +74,7 @@ reply->deleteLater();
 disconnect(&m_networkaccesmanager, 0,0,0);
 ```
 
+and voila..
+
+![qt maintenance tool](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/jsonrequestoutput.png?raw=true)
 
