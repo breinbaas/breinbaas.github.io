@@ -25,7 +25,7 @@ Ok, almost done then (refer to the google_sigin package instructions for details
 
 #### Tip
 
-The OAuth2 client ID needs to be told what the authorized javascript origins are. In my case ```http://localhost``` and ```http://localhost:43651```. Now the port 43651 was just the last port I got when I started the Flutter project using Android Studio so it could be another random number. The problem is that this will change as soon as you do a fresh start and then your login process will fail because the new port is not part of the authorized javascript origins. To fix this you need to tell Flutter to start at a specific port which can be done in Android Studio using Run | Run | main.dart and choose Edit. Simply add ```--web-port=43651``` to the Additional run args field. Now Flutter will always use the same port. Note again that you should check your port number.
+The OAuth2 client ID needs to be told what the authorized javascript origins are. In my case ```http://localhost``` and ```http://localhost:43651```. Now the port 43651 was just the last port I got when I started the Flutter project using Android Studio so it could be another random number. The problem is that this will change as soon as you do a fresh start and then your login process will fail because the new port is not part of the authorized javascript origins. To fix this you need to tell Flutter to start at a specific port which can be done in Android Studio using Run , Run , main.dart and choose Edit. Simply add ```--web-port=43651``` to the Additional run args field. Now Flutter will always use the same port. Note again that you should check your port number.
 
 ![android studio option](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/03.01.png?raw=true)
 
