@@ -5,7 +5,7 @@ date:   2021-08-24 18:48:49 +0200
 categories: flutter
 ---
 
-### Flutter and Google login
+### Flutter and Google login using Firebase
 
 Logging in with a Google account into a Flutter app is easy.. except for some very likely errors. So here is the way I found after some hours of try catch error.. Note that this is meant for a **web** application so this is no iOS or Android manual.
 
@@ -16,6 +16,10 @@ You're already almost done but be sure to watch the following checklist;
 * Did you create the OAuth2 credential ID?
 * Did you add the metadata line with the client ID to the index.html file?
 * Did you add ```<script src="https://apis.google.com/js/platform.js" async defer></script>``` to the index.html file?
+
+Now make absolutely sure that you copy the right information from GCP to Firebase, your Client ID for a webapplication in GCP will have a Client ID and a Client secret, your Firebase authentication page will require a Web client ID and a Web client secret so here is the data flow..
+
+![from gcp to firebase](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/03.02.png?raw=true)
 
 Ok, almost done then (refer to the google_sigin package instructions for details) but here is a tip and a way to handle a common error.
 
