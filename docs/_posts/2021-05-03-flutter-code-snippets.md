@@ -28,11 +28,16 @@ def cors_enabled_function(request):
     return ('Hello World!', 200, headers)
 ```
 
-You can now call this function in Flutter using;
+You can now call this function in Flutter using code like;
 
 ```
-const String URL = 'the url to your function';
-return http.get(Uri.parse(URL));
+Future<http.Response> cloudFunction(){
+  const String URL = 'the url to your function';
+  return http.get(Uri.parse(URL));
+}
+
+final response = await cloudFunction();
+print(response.body);
 ```
 
 ### Upload / load and read textfile 
