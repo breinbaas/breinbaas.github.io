@@ -18,7 +18,7 @@ from firebase_admin import storage
 
 cred = credentials.Certificate('./gcpcredentials.json')
 firebase_admin.initialize_app(cred, {
-    'storageBucket': 'leveelogic-1ce15.appspot.com'
+    'storageBucket': 'yourbucket.appspot.com'
 })
 
 bucket = storage.bucket()
