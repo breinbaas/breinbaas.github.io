@@ -30,19 +30,15 @@ The way to get the json file with your credentials is found in [this link](https
 * Click Generate New Private Key, then confirm by clicking Generate Key.
 * Securely store the JSON file containing the key.
 
-#### Get all available files in the storage
+#### Get all available files in the storage, access name and download to local file
 
 ```python
-all_files = [b for b in bucket.list_blobs()]
-```
-
-which will give you information like;
-
-```
-[<Blob: your.appspot.com, cpts/00942275-5183-4ed5-8ecd-e987c0d06fc0.cpt, 1630327229077364>, <Blob: your.appspot.com, cpts/443f4bcb-1b6d-4308-b39d-1a54ec354257.cpt, 1630327200232994>, <Blob: your.appspot.com, cpts/fbeccb6a-9074-489d-a7f3-5ba1f54f2dbc.cpt, 1630069205354434>]
+all_files = [b for b in bucket.list_blobs()] # careful with buckets that contain a lot of files!
+for file in all_files:
+    print(file.name)
+    file.download_to_filename(file.name.split('/')[-1]) # requires the bucket to contain a subdirectory, adjust code otherwise
 ```
 
 **note** ```bucket.list_blobs()``` will give you an iterator.
 
 See also [this link](https://googleapis.dev/python/storage/latest/buckets.html#list_blobs)
-
