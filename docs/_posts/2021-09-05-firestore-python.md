@@ -32,11 +32,18 @@ The way to get the json file with your credentials is found in [this link](https
 
 #### Get all available files in the storage, access name and download to local file
 
+Here is some sample code to download a file and upload it again. It doesn't make a lot of sense but you get the idea and will probably have much more useful scenarios... just like me ;-)
+
 ```python
-all_files = [b for b in bucket.list_blobs()] # careful with buckets that contain a lot of files!
-for file in all_files:
-    print(file.name)
-    file.download_to_filename(file.name.split('/')[-1]) # requires the bucket to contain a subdirectory, adjust code otherwise
+all_files = [f for f in bucket.list_blobs()]
+
+for file in all_files[:1]:
+    filename = file.name
+    new_name = filename.split('/')[-1] # remove the path part (note that your bucket might not have a path in front so adjust accordingly)
+    file.download_to_filename(new_name) # download the file
+    
+    new_blob = bucket.blob(f"thumbnails/{new_name}") # create a new filename in another path
+    new_blob.upload_from_filename(new_name) # upload the file to that path
 ```
 
 **note** ```bucket.list_blobs()``` will give you an iterator.
