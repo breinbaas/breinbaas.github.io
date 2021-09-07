@@ -22,13 +22,13 @@ try:
     buf.close()
 ```
 
-Now you can use this on the client side without having to worry about the endline characters.
+Now you can use this on the client side without having to worry about the endline characters with code like;
 
 ```
+Map map = json.decode(response.body);
 Uint8List imgdata = base64.decode(map['image']);
+return Image.memory(imgdata);
 ```
-
-and you are good to go. I think it should actually be handled on the Python side but hey.. 
 
 
 ### GCP pyhton functions and Flutter
