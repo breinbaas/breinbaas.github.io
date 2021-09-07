@@ -30,6 +30,7 @@ Uint8List imgdata = base64.decode(map['image']);
 return Image.memory(imgdata);
 ```
 
+and please note that Image comes from the flutter/widgets.dart package.
 
 ### GCP pyhton functions and Flutter
 
