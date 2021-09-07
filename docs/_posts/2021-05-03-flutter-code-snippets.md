@@ -5,6 +5,34 @@ date:   2021-05-02 15:53:00 +0200
 categories: flutter codesnippets
 ---
 
+### Python and Flutter base64 or how to pass an image from a Python API to Flutter without too much trouble
+
+This was an annoying problem which took a lot of time to solve so remember,
+
+Be sure to remove the annoying endlines if you use ```base64.encodebytes``` or else get ready for a world of pain (invalid character on the client side).
+
+```python
+result = {}
+try:
+    fig = some matplotlibfigure
+    buf = io.BytesIO()
+    fig.savefig(buf, format='png')
+    buf.seek(0)
+    result['image'] = base64.encodebytes(buf.read()).decode('utf-8').replace('\n','') # note this line!
+    buf.close()
+```
+
+**be aware that python adds newlines to the encoded string!**
+
+So if you happen to get invalid character errors in Flutter just do something like;
+
+```
+Uint8List imgdata = base64.decode(map['image'].replaceAll("\n", ""));
+```
+
+and you are good to go. I think it should actually be handled on the Python side but hey.. 
+
+
 ### GCP pyhton functions and Flutter
 
 To avoid CORS problems with GCP function and Flutter be sure to check [this link](https://cloud.google.com/functions/docs/writing/http#handling_cors_requests) and simply add the following code (well at least the interesting header part) to your GCP function;
