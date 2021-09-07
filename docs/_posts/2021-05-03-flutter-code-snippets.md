@@ -22,12 +22,10 @@ try:
     buf.close()
 ```
 
-**be aware that python adds newlines to the encoded string!**
-
-So if you happen to get invalid character errors in Flutter just do something like;
+Now you can use this on the client side without having to worry about the endline characters.
 
 ```
-Uint8List imgdata = base64.decode(map['image'].replaceAll("\n", ""));
+Uint8List imgdata = base64.decode(map['image']);
 ```
 
 and you are good to go. I think it should actually be handled on the Python side but hey.. 
