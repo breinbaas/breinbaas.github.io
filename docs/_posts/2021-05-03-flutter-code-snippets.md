@@ -5,6 +5,76 @@ date:   2021-05-02 15:53:00 +0200
 categories: flutter codesnippets
 ---
 
+### Call setState in initState of a widget
+
+Sometimes you would like to instantiate a widget with data that is not available at initialization. In this case use the following code to watch for the variable and update the widget once the information is available;
+
+```
+void initState() {
+    super.initState();
+
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
+        _getCPTThumbnailURL(); // this is an async function taking some time
+    });
+}  
+```
+
+Complete sample code for a widget that needs to create an image based on an url that is only available through an async function.
+
+```
+class CPTCard extends StatefulWidget {
+  const CPTCard({Key? key, required this.cpt}) : super(key: key);
+  final CPT cpt;
+
+  @override
+  _CPTCardState createState() => _CPTCardState();
+}
+
+class _CPTCardState extends State<CPTCard> {
+  String _cptThumbnailURL = '';
+
+  @override
+  void initState() {
+    super.initState();
+
+    WidgetsBinding.instance!.addPostFrameCallback((_) {
+      _getCPTThumbnailURL();
+    });
+  }
+
+  Future<String?> _getCPTThumbnailURL() async {
+    String? url = await FileStorage.getCPThumbnailURL(widget.cpt.storageName);
+    if (url != null) {
+      setState(() {
+        _cptThumbnailURL = url;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      color: Colors.white,
+      margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          ListTile(
+            title: Text(widget.cpt.name),
+            subtitle: Text(widget.cpt.date),
+          ),
+          _cptThumbnailURL == ''
+              ? Image(
+                  image: AssetImage('img/placeholder.jpg'),
+                )
+              : Image.network(_cptThumbnailURL),
+        ],
+      ),
+    );
+  }
+}
+```
+
 ### Python and Flutter base64 or how to pass an image from a Python API to Flutter without too much trouble
 
 This was an annoying problem which took a lot of time to solve so remember,
