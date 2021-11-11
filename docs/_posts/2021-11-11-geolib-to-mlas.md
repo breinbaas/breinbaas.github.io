@@ -181,5 +181,18 @@ And here is the output as plotted by my library (yep, it uses random colors sinc
 
 So what's next.. now it is easy to use already created calculations and apply all the functionality in my library like automatically adding ditches, optimizing the embankement etc etc and export it back to DSeries or auto calculate it. And the nice thing is that I can also create output options to other software like Plaxis. So using my own ```CalculationModel``` might not be the easiest way but it is a very rewarding and powerful way.
 
+### Update
+
+Why not show an example with the code I recently added. So here's the code;
+
+```python
+cm = CalculationModel.from_stix("C:/_TEMP/levee.stix", 0)
+cm.to_hyrcan_script('C:/_TEMP', 'hyrcan.script.hjs')
+```
+
+This will read the levee.stix file which is input for the Deltares software and export it to Hyrcan software which is a FEM model. Just 2 lines of code to read in a format from one software company (analytical model) and export it to another software company (finite element model). No way this would have been possible with just the geolib code. Point made?
+
+![the output](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/04.03.gif?raw=true)
+
 Cheers,
 Rob
