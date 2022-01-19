@@ -5,15 +5,6 @@ date:   2022-01-29 18:48:49 +0200
 categories: python qgis
 ---
 
-### Geolib series
-
----
-layout: post
-title:  "Geolib - Most basic example"
-date:   2021-04-24 18:48:49 +0200
-categories: python geolib
----
-
 ## This will be the place for me to write down some interesting QGis plugin dev code snippets.
 
 * Get layers from project 
