@@ -5,7 +5,7 @@ date:   2022-01-29 18:48:49 +0200
 categories: python qgis
 ---
 
-## This will be the place for me to write down some interesting QGis plugin dev code snippets.
+## QGis plugin dev code snippets.
 
 * Get layers from project 
 ```python
