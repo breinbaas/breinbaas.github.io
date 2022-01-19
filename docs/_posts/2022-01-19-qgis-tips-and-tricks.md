@@ -7,7 +7,6 @@ categories: python qgis
 
 ### Geolib series
 
-```python
 ---
 layout: post
 title:  "Geolib - Most basic example"
