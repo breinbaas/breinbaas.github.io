@@ -28,16 +28,6 @@ layer = QgsProject.instance().mapLayersByName(routes_layer_name)[0]
 prov = layer.dataProvider()
 field_names = [field.name() for field in prov.fields()]
 ```
-
-* Select a feature and zoom selected
-```
-expr = f'"myField"=\'myFieldIdentifier\'' # note that " means field and ' means value
-layer.selectByExpression(expr)
-box = layer.boundingBoxOfSelected()
-self.iface.mapCanvas().setExtent(box)
-self.iface.mapCanvas().refresh()
-```
-
 * Set active layer
 ```
 qgis.utils.iface.setActiveLayer(QgsMapLayer)
