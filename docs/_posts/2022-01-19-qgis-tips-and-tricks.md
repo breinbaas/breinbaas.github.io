@@ -12,6 +12,15 @@ categories: python qgis
 layers = QgsProject.instance().mapLayersByName(routes_layer_name)
 ```
 
+* Select a feature and zoom selected
+```
+expr = f'"myField"=\'myFieldIdentifier\'' # note that " means field and ' means value
+layer.selectByExpression(expr)
+box = layer.boundingBoxOfSelected()
+self.iface.mapCanvas().setExtent(box)
+self.iface.mapCanvas().refresh()
+```
+
 * Get fields from layer 
 ```
 layer = QgsProject.instance().mapLayersByName(routes_layer_name)[0]
