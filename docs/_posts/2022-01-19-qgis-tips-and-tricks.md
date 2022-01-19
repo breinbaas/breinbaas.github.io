@@ -8,12 +8,12 @@ categories: python qgis
 ## This will be the place for me to write down some interesting QGis plugin dev code snippets.
 
 * Get layers from project 
-```
+```python
 layers = QgsProject.instance().mapLayersByName(routes_layer_name)
 ```
 
 * Select a feature and zoom selected
-```
+```python
 expr = f'"myField"=\'myFieldIdentifier\'' # note that " means field and ' means value
 layer.selectByExpression(expr)
 box = layer.boundingBoxOfSelected()
@@ -22,13 +22,13 @@ self.iface.mapCanvas().refresh()
 ```
 
 * Get fields from layer 
-```
+```python
 layer = QgsProject.instance().mapLayersByName(routes_layer_name)[0]
 prov = layer.dataProvider()
 field_names = [field.name() for field in prov.fields()]
 ```
 * Set active layer
-```
+```python
 qgis.utils.iface.setActiveLayer(QgsMapLayer)
 ```
 
