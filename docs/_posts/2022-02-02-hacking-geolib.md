@@ -61,7 +61,7 @@ try:
     lon, lat = proj.transform(refpoint.x, refpoint.y)
     dstability_model.set_reference_point(lat, lon)
 except:
-    pass // it defaults to 0.0, 0.0 which is fine 
+    pass # it defaults to 0.0, 0.0 which is fine 
 
 return dstability_model
 ```
