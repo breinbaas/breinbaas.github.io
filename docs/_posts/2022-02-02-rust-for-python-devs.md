@@ -9,6 +9,8 @@ categories: rust
 
 Well the title is not completely correct because I also have a C++ background so things like stack and heap and memory management are not unknown to me but in this doc I simply notate all the things from the Rust book that are really different or powerful just as a reminder or lookup during Rust programming. Maybe it helps you too.
 
+**work in progress**
+
 ## A
 
 ### array loop 
