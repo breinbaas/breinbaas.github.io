@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "Geolib - Hacking geolib"
-date:   2022-02-02 18:48:49 +0200
+date:   2022-02-02 19:48:49 +0200
 categories: python geolib
 ---
 
 ### Geolib hacking
 
-Now this might be the most useless code you will ever read but I found it useful so maybe someone else does at well :-) Anyway, thanks to Almar Joling for coming up with the idea!
+Now this might be the most useless code you will ever read but I found it useful so maybe someone else does as well :-) Anyway, thanks to Almar Joling for coming up with the idea!
 
 So what's that idea? Almar has a great Unity / web based 3D visualization tool for Deltares stix files (geotechnical slope stability software files) and I have a method to automatically generate these stix files based on CPT's / crosssections and some more data. So we thought.. let's try to find a way to upload a lot of stix files so Almar's tool can render a nice 3D model. 
 
