@@ -15,7 +15,7 @@ The problem we found was that we needed some way to find the location of a fixed
 
 Then Almar said.. 'why not add the information in the stix file'.. readers of my previous posts might know that a stix file is in fact a bunch of json files zipped together. So this evening I did a test and indeed the software does not complain if you add another json file in the stix file.. 
 
-The next step was adjust geolib to implement a way to add the reference point and it proved to be easy. **Note, don't hack in the geolib code unless you don't mind that it won't work afterwards!**
+The next step was to adjust geolib to implement a way to add the reference point and it proved to be easy. **Note, don't hack in the geolib code unless you don't mind that it won't work afterwards!**
 
 The first thing to note is that the ```DStabilityStructure``` is the base of all properties of the calculation. The fields in this class are automatically serialized to json files with some clever parsing and pydantic usage. Adding a new field is easy..
 
