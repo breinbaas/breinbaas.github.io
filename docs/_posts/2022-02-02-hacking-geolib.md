@@ -50,7 +50,7 @@ def set_reference_point(self, latitude: float, longitude: float):
 
 And this is enough.. using the ```serialize``` function from ```DStabilityModel``` now gives us an extra file in the stix file named ```referencepoint.json```
 
-![stix files](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/06.01.jpg?raw=true)
+![stix files](https://github.com/breinbaas/breinbaas.github.io/blob/master/img/06.01.png?raw=true)
 
 Now my own code (called MLAS which stands for Modular Levee Assessment System) uses this field because MLAS creates ```CalculationModel``` classes which contain a crosssection and a crosssection contains a referencepoint in RD (EPSG:28992) space. To make it more generic I convert those coordinates to WGS84 (EPSG:4326) and store it in the calculation model before I serialize it to a stix file.
 
